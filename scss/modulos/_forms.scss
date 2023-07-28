@@ -1,0 +1,29 @@
+form {
+    color: $titles-color; 
+    background-color: $titles-background;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  fieldset {
+    
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  legend {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+
+  }
+  
+  
+  label {
+    margin-top: 20px;
+    display: block;  
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
