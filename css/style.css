@@ -6,7 +6,7 @@
 
 body {
   background-image: url(../images/wallpaper.jpg);
-  background-size: 430%;
+  background-size: 250%;
   background-position: center;
   animation: animateBackground 10s infinite;
   height: 100vh;
@@ -19,13 +19,13 @@ body {
 
 @keyframes animateBackground {
   0% {
-    background-size: 430% auto;
+    background-size: 250% auto;
   }
   50% {
-    background-size: 450% auto;
+    background-size: 270% auto;
   }
   100% {
-    background-size: 430% auto;
+    background-size: 250% auto;
   }
 }
 header {
