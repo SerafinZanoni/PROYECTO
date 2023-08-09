@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta
+      name="description"
+      content="Todos los programas grabados del interior de la provincia de Cordoba, su cultura, sus tradiciones y festivales."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="shortcut icon"
@@ -12,42 +21,118 @@
       type="image/x-icon"
     />
 
-    <title>Caminos del Interior</title>
+    <title>Caminos del Interior - Provincia de Cordoba</title>
   </head>
 
   <body>
     <header>
       <nav>
-
         <div id="logoheader">
-          <img width="270px"  src="./assets/img/CAMINOSlogo.png" alt="LOGO">        
+          <img src="./assets/img/CAMINOSlogo.png" alt="LOGO" />
         </div>
-        
         <div id="navs">
-            <ul id="navs-container">
-              <li class="border"><a href="./index.html">Inicio</a></li>
-              <li class="border"><a href="./pages/pageone.html">Programas</a></li>
-              <li class="border"><a href="./pages/pagetwo.html">Nosotros</a></li>
-              <li class="border"><a href="./pages/forms.html">Unete</a></li>
-              <li><a href="./pages/contact.html">Contacto</a></li>
-            </ul>
+          <ul id="navs-container">
+            <li class="border-0"><a href="./index.html">Inicio</a></li>
+            <li class="border-0">
+              <a href="./pages/programs.html">Programas</a>
+            </li>
+            <li class="border-0">
+              <a href="./pages/aboutus.html">Nosotros</a>
+            </li>
+            <li class="border-0"><a href="./pages/forms.html">Unete</a></li>
+            <li class="border-0">
+              <a href="./pages/contact.html">Contacto</a>
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
-    
     <main>
-      <div>
-               
+      <div class="carousel-container">
+        <div
+          id="carouselExampleAutoplaying"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://scontent.fcor2-2.fna.fbcdn.net/v/t39.30808-6/279907718_2157429104412390_272633832675819303_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a26aad&_nc_eui2=AeG1RbJo39wnZuFehbhIoT_N6jpljNQI7BDqOmWM1AjsELTFwjkkjv86VgMzGLQaYA0&_nc_ohc=HualHon8ef4AX8jd-sW&_nc_ht=scontent.fcor2-2.fna&oh=00_AfAnuAh5ArkmfU58FCP73GP6oQsoyucG7p0sgfmegcS6AA&oe=64D89E75"
+                class="d-block w-100"
+                alt="IMAGEN CARRUSEL 1"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://scontent.fcor2-1.fna.fbcdn.net/v/t39.30808-6/325832527_1223976818472943_4816970809911075311_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeEsEXlOc94B72KID4qiAOeKz6piOkLG1ebPqmI6QsbV5qi-EeryZTv0B4ZNVE84Z6w&_nc_ohc=G9D1MkGNJyYAX_TQ3Xd&_nc_ht=scontent.fcor2-1.fna&oh=00_AfAV7YQDLNKt9vHeWJBwWtlHpxQ8Akf2sxXdqmnu6JK5zA&oe=64D8A16A"
+                class="d-block w-100"
+                alt="IMAGEN CARRUSEL 2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://scontent.fcor2-1.fna.fbcdn.net/v/t39.30808-6/253715986_2020929274729041_3687354650265450505_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a26aad&_nc_eui2=AeGtneKWPnK8pGMEZFy918T1ns3Ej0POW7CezcSPQ85bsBhqpxQDmhon1bbFPmWyODU&_nc_ohc=mkOynQwmK-0AX-ulV4s&_nc_ht=scontent.fcor2-1.fna&oh=00_AfBRBAwOLRVIXwTnj5ehF_6dBSMLsxGsjHzlyziHClPQbA&oe=64D7B9E8"
+                class="d-block w-100"
+                alt="IMAGEN CARRUSEL 3"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
     </main>
-    
+
     <footer>
-      <div id="footer-copy">Caminos del Interior y su Logo son marcas registradas de Medios y Producciones Córdoba S.R.L.</div>
+      <div id="footer-copy">
+        Caminos del Interior y su Logo son marcas registradas de Medios y
+        Producciones Córdoba S.R.L.
+      </div>
       <div id="footer-images">
-        <a href="#"><img src="./assets/img/WSlogo.png" alt="Imagen 1"></a>
-        <a href="#"><img src="./assets/img/FBlogo.png" alt="Imagen 2"></a>
-        <a href="#"><img src="./assets/img/IGlogo.png" alt="Imagen 3"></a>
+        <a target="_blank" href="https://www.facebook.com/caminosdelinterior"
+          ><img
+            src="./assets/img/facebook-svgrepo-com.svg"
+            alt="Contacto por Facebook"
+        /></a>
+
+        <a
+          target="_blank"
+          href="https://www.instagram.com/caminosdelinterior/?hl=es"
+          ><img
+            src="./assets/img/instagram-svgrepo-com.svg"
+            alt="Contacto por Instagram"
+        /></a>
+        <a
+          target="_blank"
+          href="https://www.tiktok.com/@caminosdelinterior?_t=8eXa4IOMkJa&_r=1 "
+          ><img
+            src="./assets/img/tiktok-svgrepo-com.svg"
+            alt="Contacto por Tiktok"
+        /></a>
       </div>
     </footer>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

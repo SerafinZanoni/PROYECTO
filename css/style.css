@@ -6,16 +6,28 @@
 
 body {
   background-image: url(../images/wallpaper.jpg);
-  background-size: cover;
+  background-size: 430%;
   background-position: center;
-  background-repeat: no-repeat;
+  animation: animateBackground 10s infinite;
   height: 100vh;
   display: grid;
-  grid-template-rows: 0.5fr 2fr 1fr 0.5fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "header header header" "main main main" "main main main" "footer footer footer";
+  grid-template-rows: 80px 1fr 150px;
+  grid-gap: 1em;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+  background-repeat: no-repeat;
 }
 
+@keyframes animateBackground {
+  0% {
+    background-size: 430% auto;
+  }
+  50% {
+    background-size: 450% auto;
+  }
+  100% {
+    background-size: 430% auto;
+  }
+}
 header {
   grid-area: header;
 }
@@ -41,42 +53,14 @@ nav #navs-container {
   flex-wrap: wrap;
   align-items: center;
   justify-content: end;
+  gap: 1.5em;
 }
-nav #navs-container .border {
-  border-right: 2px solid #fff;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-main {
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-main div {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-main div p {
-  font-size: 1.3rem;
-  color: #fff;
-  width: 65%;
-  text-align: center;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.505);
-}
-main div article iframe {
-  margin: 20px;
+nav div img {
+  width: 270px;
 }
 
 footer {
   color: #fff;
-  font-size: 1.2rem;
   grid-area: footer;
   display: flex;
   flex-direction: row;
@@ -105,28 +89,26 @@ a:hover {
 }
 
 li {
+  border-style: none;
   list-style: none;
-  margin: 5px;
 }
 
 h1 {
   color: rgba(0, 0, 0, 0.741);
-  margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.505);
+  margin-bottom: 0px;
+  background-color: rgba(130, 130, 130, 0.258);
   border-radius: 10px;
   text-align: center;
 }
 
 h2 {
   color: rgba(0, 0, 0, 0.741);
-  margin-bottom: 20px;
-  margin-top: 20px;
-  background-color: rgba(255, 255, 255, 0.505);
+  background-color: rgba(130, 130, 130, 0.258);
   border-radius: 10px;
 }
 
 h3 {
-  background-color: rgba(255, 255, 255, 0.505);
+  background-color: rgba(130, 130, 130, 0.258);
   border-radius: 5px;
   margin-bottom: 5px;
   margin-top: 5px;
@@ -134,19 +116,19 @@ h3 {
 
 form {
   color: rgba(0, 0, 0, 0.741);
-  background-color: rgba(255, 255, 255, 0.505);
+  background-color: rgba(130, 130, 130, 0.258);
   border-radius: 5px;
   text-align: center;
 }
 
 fieldset {
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
 legend {
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 20px;
   font-weight: bold;
 }
@@ -158,31 +140,40 @@ label {
   margin-bottom: 5px;
 }
 
-@media (max-width: 915px) {
+@media (max-width: 980px) {
   footer {
     flex-direction: column;
     text-align: center;
+    gap: 1em;
+    font-size: 1em;
+  }
+  footer #footer-copy {
+    flex-grow: 0;
+  }
+}
+@media (max-width: 915px) {
+  body {
+    background-size: cover;
+    animation: none;
+    background-repeat: repeat;
   }
 }
 @media (max-width: 768px) {
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
   footer #footer-copy {
-    font-size: 0.7rem;
     order: 2;
-    margin-bottom: 5px;
   }
   footer #footer-images {
     order: 1;
-    margin-top: 10px;
+    flex-grow: 0;
   }
   nav {
-    flex-direction: column;
     justify-content: center;
   }
+  nav #navs {
+    flex-grow: 0;
+  }
   nav #logoheader {
+    text-align: center;
     margin-bottom: 10px;
   }
   nav #navs-container {
@@ -192,35 +183,99 @@ label {
     padding-left: 5px;
     padding-right: 5px;
   }
-  a {
-    font-size: 0.8rem;
+  main .aboutus__title {
+    font-size: 1.5em;
+    margin-top: 20px;
   }
-  main div p {
-    font-size: 1rem;
-    color: #fff;
-    width: 65%;
-    text-align: center;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.505);
-  }
-  main div article iframe {
-    width: 220px;
-    margin: 10px;
+  main .programs {
+    width: 250px;
+    height: 200px;
   }
 }
-@media (max-width: 480px) {
-  main div p {
-    font-size: 0.8rem;
-    color: #fff;
-    width: 65%;
-    text-align: center;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.505);
+@media (max-width: 560px) {
+  main .aboutus__title {
+    margin-top: 50px;
   }
-  main div article iframe {
-    width: 170px;
-    margin: 5px;
+  main .programs {
+    width: 180px;
+    height: 200px;
   }
+  form {
+    margin-top: 40px;
+  }
+}
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.w-100 {
+  height: 60vh;
+}
+
+.carousel-container {
+  max-width: 50%;
+  max-height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carousel-container img {
+  width: 100%;
+  height: auto;
+}
+
+p {
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
+}
+
+.aboutus {
+  max-width: 60%;
+  margin: 0 auto;
+  gap: 2em;
+}
+
+.aboutus__content-text {
+  background-color: rgba(139, 139, 139, 0.82);
+  padding: 2em;
+  border-radius: 1em;
+}
+
+.contact {
+  max-width: 60%;
+  margin: 0 auto;
+  gap: 2em;
+}
+
+.contact__content-text {
+  background-color: rgba(139, 139, 139, 0.82);
+  padding: 2em;
+  border-radius: 1em;
+  text-align: center;
+}
+
+.programs {
+  width: 80%;
+  height: 300px;
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+}
+
+.programs__video {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
